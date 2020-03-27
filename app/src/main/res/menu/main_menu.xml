@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_acasa"
+        android:title="Home screen">
+    </item>
+
+    <item android:id="@+id/menu_second_activity"
+        android:title="Second Activity">
+    </item>
+
+    <item android:id="@+id/menu_settings_activity"
+        android:title="Settings Activity">
+    </item>
+</menu>
