@@ -11,4 +11,12 @@
     <item android:id="@+id/menu_settings_activity"
         android:title="Settings Activity">
     </item>
+
+    <item android:id="@+id/menu_sensor_activity"
+        android:title="Sensors Activity">
+    </item>
+
+    <item android:id="@+id/menu_gps_activity"
+        android:title="Gps Activity">
+    </item>
 </menu>

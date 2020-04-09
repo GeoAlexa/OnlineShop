@@ -1,18 +1,15 @@
 package com.example.onlineshop;
 
 import android.content.Intent;
-import android.database.DataSetObserver;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -36,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         myListView.setAdapter(productArrayAdapter);
 
+        // am pus un listener pentru fiecare item afisez descrierea
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -100,7 +98,20 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.menu_settings_activity:
                 Intent settingsActivity = new Intent(getApplicationContext(), SettingsActivity.class);
+                settingsActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getApplicationContext().startActivity(settingsActivity);
+                break;
+
+            case R.id.menu_sensor_activity:
+                Intent sensorsActivity = new Intent(getApplicationContext(), SensorActivity.class);
+                sensorsActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(sensorsActivity);
+                break;
+
+            case R.id.menu_gps_activity:
+                Intent gpsActivity = new Intent(getApplicationContext(), GpsActivity.class);
+                gpsActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(gpsActivity);
                 break;
 
             default:
@@ -109,8 +120,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 }
