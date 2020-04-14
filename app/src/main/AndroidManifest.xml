@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".SensorActivity"></activity>
-        <activity android:name=".GpsActivity"></activity>
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SensorActivity" />
+        <activity android:name=".GpsActivity" />
+        <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -114,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
                 getApplicationContext().startActivity(gpsActivity);
                 break;
 
+            case R.id.meniu_camera_activity:
+                Intent cameraActivity = new Intent(getApplicationContext(), CameraActivity.class);
+                cameraActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(cameraActivity);
+                break;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
